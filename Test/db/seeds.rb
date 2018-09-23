@@ -8,5 +8,5 @@
 json = ActiveSupport::JSON.decode(File.read('db/seeds/preguntas.json'))
 
 json.each do |a|
-  Country.create!(a['pregunta'], without_protection: true)
+  Pregunta.create!(a['pregunta'], without_protection: true)
 end
