@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  optionA: MyText
+  optionB: MyText
+  optionC: MyText
+  optionD: MyText
+  question: one
+
+two:
+  optionA: MyText
+  optionB: MyText
+  optionC: MyText
+  optionD: MyText
+  question: two

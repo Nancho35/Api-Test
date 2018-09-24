@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: test_pro
+  database: test
   username: test
   password: 123456
 
@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: test_pro
+  database: test
   username: test
   password: 123456
 
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: test_pro
+  database: test
   username: test
   password: 123456

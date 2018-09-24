@@ -10,22 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_23_200914) do
+ActiveRecord::Schema.define(version: 2018_09_24_010026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "pregunta", force: :cascade do |t|
-    t.text "respuesta_uno"
-    t.integer "peso_uno"
-    t.text "respuesta_dos"
-    t.integer "peso_dos"
-    t.text "respuesta_tres"
-    t.integer "peso_tres"
-    t.text "respuesta_cuatro"
-    t.integer "peso_cuatro"
+  create_table "answers", force: :cascade do |t|
+    t.text "optionA"
+    t.text "optionB"
+    t.text "optionC"
+    t.text "optionD"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "question_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "answers", "questions"
 end
