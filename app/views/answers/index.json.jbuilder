@@ -5,13 +5,13 @@ json.array! @answers do |answer|
     end
     json.id answer.id
     json.optionA answer.optionA
-    json.optionA answer.valueA
+    json.valueA answer.valueA
     json.optionB answer.optionB
-    json.optionA answer.valueB
+    json.valueB answer.valueB
     json.optionC answer.optionC
-    json.optionA answer.valueC
+    json.valueC answer.valueC
     json.optionD answer.optionD
-    json.optionA answer.valueD
+    json.valueD answer.valueD
 
 
 end
